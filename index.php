@@ -57,7 +57,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="historia.php">Nosotros</a>
+                    <a class="nav-link" href="nosotros.php">Nosotros</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="quienes-somos.php">Contacto</a>
@@ -121,7 +121,7 @@
       <hr>
       <p>Nuestra consultora cuenta con 11 años de experiencia en el área de fomento productivo, 
       ejecutamos Programas de FOSIS dirigidos a emprendedores y emprendedoras de la región metropolitana</p>
-      <a href="quienes-somos.php" class="btn bg-orange text-white">Conoce a nuestro equipo</a>
+      <a href="nosotros.php" class="btn bg-orange text-white">Conoce a nuestro equipo</a>
 
     </div>
     <!--Grid column-->
