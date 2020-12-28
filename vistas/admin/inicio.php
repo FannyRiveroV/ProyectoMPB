@@ -3,6 +3,9 @@
     <!--Navbar-->
     <nav class="navbar bg-primary fixed-top">
     <!-- Additional container -->
+    <a class="navbar-brand" href="#">
+        <img src="./img/logo.png" width="110">
+      </a>
     <div class="container text-center">
         <!-- Navbar brand -->
         <li class="text-primary">-- ---</li>
@@ -28,10 +31,10 @@
 
     }
 ?>
-<br> <br> <br>
+<br> <br> <br> <br> <br> <br>
 <div class="container row">
     <div class="container col lg-12 md-12 mb-5">
-        <br><br>
+        <br><br><br><br>
         <h2 class="text-center">Clientes Registrados</h2><br>
         <table class="container text-center table table-bordered">
         <caption>Lista de usuarios</caption>

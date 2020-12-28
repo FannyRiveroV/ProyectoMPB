@@ -26,10 +26,10 @@
                 </div>
                 <form action="index.php?pagina=login" method="POST" class="form-floating">
                     <div class="form-group" id="user-group">
-                        <input type="text" class="form-control" required="required" placeholder="Ingrese correo" name="correo"/>
+                        <input type="text" class="form-control" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" required="required" placeholder="Ingrese correo" name="correo"/>
                     </div>
                     <div class="form-group" id="contrasena-group">
-                        <input type="password" class="form-control" required="required" placeholder="Ingrese clave" name="password"/>
+                        <input type="password" class="form-control" required="required" placeholder="INGRESE CLAVE" name="password"/>
                     </div>
                     <button type="submit" class="btn btn-danger"><i class="fas fa-sign-in-alt"></i>  Ingresar </button>
                 </form>

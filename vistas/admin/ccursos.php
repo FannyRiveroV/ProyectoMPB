@@ -36,6 +36,20 @@
                             <input type="hidden" name="opcion" value="<?php echo $opcion?>"><br>
                             <input type="submit" name="boton" class="container btn btn-primary" value="Mostrar clientes incritos en este curso">
                         </form>
+                        <?php
+                            if(isset($_POST['curso'])){
+
+                                $curso=$_POST['curso'];
+                                $sql="SELECT * FROM curso WHERE idcurso='$curso' ";
+                                $result_uni=mysqli_query($con,$sql);
+                                while($mostrar=mysqli_fetch_array($result_uni))
+                                {
+                                    $curso=$mostrar['nombre_curso'];
+                                }
+                                echo "<h3 class='text-center'>Clientes inscritos en: ".$curso."<h3>";
+                            }
+                            ?>
+                        
                         <span id="mensaje"> </span>
                         <?php
                         if(isset($_POST['curso'])){

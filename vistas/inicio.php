@@ -85,7 +85,7 @@
           <h4 class="card-title">Material audiovisual</h4>
           <!--Text-->
           <p class="card-text">Sabemos que emprender es dificil por eso preparamos una selección con los mejores videos para tu emprendimiento.</p>
-          <a href="index.php?pagina=login" class="btn bg-orange text-white">Ver lugares</a>
+          <a href="index.php?pagina=login" class="btn bg-orange text-white">Ver videos</a>
         </div>
 
       </div>

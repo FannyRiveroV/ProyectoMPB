@@ -3,6 +3,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width initial-scale=1.0">
         <title> MPB</title>
+        <link rel="icon" type="./img/logo.png">
         <!--CSS Bootsprat-->
         <link rel="stylesheet" href="./css/bootstrap.min.css">
         <!--RRSS-->
@@ -35,7 +36,9 @@
     <!-- Additional container -->
     <div class="container">
         <!-- Navbar brand -->
-        <a class="navbar-brand" href="https://www.mpbconsultorias.cl/">M.P.B</a>
+      <a class="navbar-brand" href="#">
+        <img src="./img/logo.png" width="100">
+      </a>
         <!-- Collapse button -->
         <button 
             class="navbar-toggler" 

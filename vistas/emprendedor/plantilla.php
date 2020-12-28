@@ -34,11 +34,14 @@
 </head>
 <body>
     <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-orange fixed-top">
+     <!--Navbar-->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-orange fixed-top">
     <!-- Additional container -->
     <div class="container">
         <!-- Navbar brand -->
-        <a class="navbar-brand" href="https://www.mpbconsultorias.cl/">M.P.B</a>
+      <a class="navbar-brand" href="#">
+        <img src="./img/logo.png" width="100">
+      </a>
         <!-- Collapse button -->
         <button 
             class="navbar-toggler" 

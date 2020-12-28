@@ -1,9 +1,9 @@
 <br><br><br><br>
 <!--Main container-->
-<div class="row">
+<div class="container">
 
   <!--Grid row-->
-  <div class="row">
+  <div class="container row">
     <div class="container col-md-10 mb-5">
 
       <h2 class="text-center">Quienes Somos</h2>

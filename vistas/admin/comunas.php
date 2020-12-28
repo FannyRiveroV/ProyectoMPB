@@ -37,7 +37,20 @@
                     <br>
                     <input class="container btn btn-primary" type="submit" name="boton" value="Mostrar Clientes">
                 </form>
-                <span id="mensaje"> </span>
+                <?php
+                            if(isset($_POST['comuna'])){
+
+                                $comuna=$_POST['comuna'];
+                                $sql="SELECT * FROM comuna WHERE idcomuna='$comuna' ";
+                                $result_uni=mysqli_query($con,$sql);
+                                while($mostrar=mysqli_fetch_array($result_uni))
+                                {
+                                    $comuna=$mostrar['nombre_comuna'];
+                                }
+                                echo "<h3 class='text-center'>Clientes inscritos en: ".$comuna."<h3>";
+                            }
+                            ?>
+                 <span id="mensaje"> </span>
             </div>
         </div>
     <div>

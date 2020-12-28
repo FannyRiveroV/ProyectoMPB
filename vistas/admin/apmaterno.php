@@ -6,7 +6,7 @@
         <div class="container col-sm-10">
             <div class="container">       
                                         <form  class="container col-sm-8 form-floating" action="admin.php?pagina=apmaterno" method="POST">
-                                            <input type="text" name="fapellido_materno" placeholder="Ingrese apellido_materno"> <br>
+                                            <input type="text" name="fapellido_materno" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" placeholder="Ingrese apellido_materno"> <br>
                                             <input type="submit" name="boton" value="Buscar Cliente">
                                         </form>
                                         <span id="mensaje"></span>

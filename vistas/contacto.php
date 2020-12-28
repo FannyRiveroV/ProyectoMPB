@@ -35,7 +35,7 @@
                   <label for="materialContactFormMessage">Mensaje</label>
               </div>
               <!-- Send button -->
-              <button class="btn  btn-rounded btn-block z-depth-0 my-4 waves-effect bg-orange2" type="submit"> Enviar </button>
+              <button class="btn  btn-rounded btn-danger btn-block z-depth-0 my-4 waves-effect bg-orange2" type="submit"> Enviar </button>
               
             </form>
           </div>

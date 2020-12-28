@@ -28,6 +28,20 @@
                         if(isset($_POST['curso_nuevo']))
                         {
                             $curson=$_POST['curso_nuevo'];
+                            $sqluser="SELECT idcurso FROM curso
+                                        WHERE nombre_curso = '$curson'";
+
+                            $resultadouser=$con->query($sqluser);
+                            $filas= $resultadouser->num_rows;
+                            if($filas > 0){
+                                ?>
+                                <script>
+                                    alert("El curso ya se encuentra ingresado en la bbdd") ;
+                                    window.location = 'admin.php?pagina=acursos';
+                                </script>
+                                <?php
+                            }else{
+                            
                             $sql="INSERT INTO curso(nombre_curso) VALUE ('$curson')";
                             $con->query($sql);
                             ?>
@@ -39,4 +53,5 @@
                             window.setTimeout(function() { window.location = "admin.php?pagina=cursos" },1000);
                         </script><?php
                             
+                            }
                         }

@@ -54,6 +54,7 @@
                             }
                         ?>
                         </select>
+                        
                     </div>
                     <div class="form-group"  id="user-group">
                         <input type="text" required="required"  class="form-control" name="telefono" placeholder="Ingrese numero celular de 8 digitos" minlength="8" >
@@ -74,8 +75,10 @@
                                 $cont=1;
                                 while($mostrar=mysqli_fetch_array($resu)){
                                     echo"             <input type='checkbox' name='op_".$cont."' value='".$cont."'>" .$mostrar['nombre_curso']."</input>";
+                                    $cont++;
                                 }
                         ?>
+                        <input type="hidden" name="cant_cursos" value="<?php echo $cont;?>">
                     </div><br>
                     <input type="submit" name="boton"  class="btn btn-danger" value="Registre el usuario">
                 <br> <br>
@@ -108,7 +111,6 @@
 
         $resultadouser=$con->query($sqluser);
 
-        
 
         $filas= $resultadouser->num_rows;
         if($filas > 0){
@@ -137,13 +139,14 @@
                 $idcliente=$mos['idcliente'];
             }
 
-            $cont=1;
-            while(isset($_POST['op_'.$cont]))
+            for($i=1;$i<=$_POST['cant_cursos'];$i++)
             {
-                $cursos=$_POST['op_'.$cont];
-                $sqlcursos="INSERT INTO interes(id_cliente,id_curso) VALUE (".$idcliente.",".$cursos.")";
-                $con->query($sqlcursos);
-                $cont++;
+                if(isset($_POST['op_'.$i]))
+                {
+                    $cursos=$_POST['op_'.$i];
+                    $sqlcursos="INSERT INTO interes(id_cliente,id_curso) VALUE (".$idcliente.",".$cursos.")";
+                    $con->query($sqlcursos);
+                }
             }
             
 
@@ -152,9 +155,9 @@
                 <script>
                     var element = document.getElementById("men");
                     element.style.color = '#d00' 
-                    element.className = "container card text-center alert alert-success"; 
+                    element.className = "container card text-center bg-white"; 
                     element.innerHTML ="<span class='alert-success'>Registro exitoso, revise el material disponible </span>";
-                    window.setTimeout(function() { window.location = 'emprendedor.php?pagina=emp' },3000);
+                    window.setTimeout(function() { window.location = 'index.php?pagina=login' },3000);
                 </script>
                 <?php
             }else{
