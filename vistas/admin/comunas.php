@@ -13,12 +13,12 @@
     }
 ?><br><br>
 <div class="container row">
-    <div class="container col lg-12 md-12 mb-5">
+    <div class="container col lg-10 md-10 mb-5">
         <br><br>
         <h2 class="text-center">Clientes por comuna</h2><br>
-        <div class="container col-sm-8">
+        <div class="container col-sm-10">
             <div class="container">
-                <form class="container form-floating" action="admin.php?pagina=comunas" method="POST">
+                <form class="container col-sm-8 form-floating" action="admin.php?pagina=comunas" method="POST">
                     <select class="container text-center" name="comuna">
                     <br><br>
                     <option> Seleccione comuna </option>
@@ -37,6 +37,7 @@
                     <br>
                     <input class="container btn btn-primary" type="submit" name="boton" value="Mostrar Clientes">
                 </form>
+                <span id="mensaje"> </span>
             </div>
         </div>
     <div>
@@ -48,47 +49,60 @@ if(isset($_POST['comuna']))
 <div class="container row">
     <div class="container col lg-12 md-12 mb-5">
         <br><br>
-        <table class="container text-center table table-bordered">
-            <thead class="container table-primary">
-                <tr>
-                    <th>idcliente</th>
-                    <th>Nombre</th>
-                    <th>Apellido P</th>
-                    <th>Apellido M</th>
-                    <th>Telefono</th>
-                    <th>Correo</th>
-                    <th>id Comuna</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                    
-                        
+                    <?php   
                     $comuna=$_POST['comuna'];
                     $sql="SELECT * FROM cliente WHERE id_comuna='$comuna'";
                     $result= mysqli_query($con,$sql);
-                    while($mostrar=mysqli_fetch_array($result))
-                    {       
-                ?>
-                    <tr>
-                        
-                        <td><?php echo $mostrar['idcliente']?></td>
-                        <td><center><?php echo $mostrar['nombre']?></center></td>
-                        <td><center><?php echo $mostrar['apellido_paterno']?></center></td>
-                        <td><center><?php echo $mostrar['apellido_materno']?></center></td>
-                        <td><center><?php echo $mostrar['telefono']?></center></td>
-                        <td><center><?php echo $mostrar['correo']?></center></td>
-                        <td><center><?php
-                            $categ=$mostrar['id_comuna'];
-                            $cat="SELECT * FROM comuna WHERE idcomuna='$categ' ";
-                            $result_uni=mysqli_query($con,$cat);
-                            while($mostrar_uni=mysqli_fetch_array($result_uni))
-                            {
-                                echo $mostrar_uni['nombre_comuna'];
-                            }
-                        ?></center></td>
-                    </tr>
+                    $row_cnt = $result->num_rows;
+                    if($row_cnt>0){
+                        ?>
+                        <table class="container text-center table table-bordered">
+                            <thead class="container table-primary">
+                                <tr>
+                                    <th>idcliente</th>
+                                    <th>Nombre</th>
+                                    <th>Apellido P</th>
+                                    <th>Apellido M</th>
+                                    <th>Telefono</th>
+                                    <th>Correo</th>
+                                    <th>id Comuna</th>
+                                </tr>
+                            </thead>
+                        <tbody>
+                            <?php
+                            while($mostrar=mysqli_fetch_array($result))
+                            {       
+                            ?>
+                            <tr>
+                                
+                                <td><?php echo $mostrar['idcliente']?></td>
+                                <td><?php echo $mostrar['nombre']?></td>
+                                <td><?php echo $mostrar['apellido_paterno']?></td>
+                                <td><?php echo $mostrar['apellido_materno']?></td>
+                                <td><?php echo $mostrar['telefono']?></td>
+                                <td><?php echo $mostrar['correo']?></td>
+                                <td><?php
+                                    $categ=$mostrar['id_comuna'];
+                                    $cat="SELECT * FROM comuna WHERE idcomuna='$categ' ";
+                                    $result_uni=mysqli_query($con,$cat);
+                                    while($mostrar_uni=mysqli_fetch_array($result_uni))
+                                    {
+                                        echo $mostrar_uni['nombre_comuna'];
+                                    }
+                                ?></td>
+                            </tr>
+                            <?php
+                        }
+                    }
+                    else {
+                        ?>
+                        <script>
+                            var element = document.getElementById("mensaje");
+                            element.style.color = '#d00' 
+                            element.className = "container card col-md-11 mb-5 text-center alert alert-danger"; 
+                            element.innerHTML ="<span class='alert-danger'> No existen clientes en esta comuna</span>";
+                        </script>
                     <?php
                     }
                 }
-            ?>
+ ?>

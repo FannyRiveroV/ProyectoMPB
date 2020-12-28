@@ -8,7 +8,7 @@
 
       <h2 class="text-center">Quienes Somos</h2>
       <hr>
-      <p>
+      <p class="container text-center">
       Nuestro equipo interdisciplinario, posee formación académica en Estudios de Género y Cultura, 
       así como también experiencia y compromiso en acercar éste enfoque a diversas comunidades: Mujeres Jefas de Hogar, Migrantes,
        Hombres y Mujeres de la tercera edad, Jóvenes, discapacitados, entre otros, quienes progresivamente se 
@@ -24,7 +24,7 @@
       <div class="card">
         <!--Card image-->
         <div class="view overlay">
-          <img src="./img/blenda.jpeg" class="card-img-top img_eq"
+          <img src="./img/blenda.jpeg" class="card-img-top equipo-img"  width="220px" height="300"
             alt="">
           <a href="#">
             <div class="mask rgba-white-slight"></div>
@@ -46,7 +46,7 @@
       <div class="card">
         <!--Card image-->
         <div class="view overlay">
-          <img src="./img/paola.jpeg" class="card-img-top img_eq"
+          <img src="./img/paola.jpeg" class="card-img-top equipo-img"  width="220px" height="300"
             alt="">
           <a href="#">
             <div class="mask rgba-white-slight"></div>
@@ -73,7 +73,7 @@
 
         <!--Card image-->
         <div class="view overlay">
-          <img src="./img/michael.jpeg" class="card-img-top img_eq"
+          <img src="./img/michael.jpeg" class="card-img-top equipo-img"  width="220px" height="300"
             alt="">
           <a href="#">
             <div class="mask rgba-white-slight"></div>
@@ -95,7 +95,7 @@
       <div class="card">
         <!--Card image-->
         <div class="view overlay">
-          <img src="./img/katherine.jpeg" class="card-img-top img_eq"
+          <img src="./img/katherine.jpeg" class="card-img-top equipo-img"  width="220px" height="300"
             alt="">
           <a href="#">
             <div class="mask rgba-white-slight"></div>
@@ -122,7 +122,7 @@
 
         <!--Card image-->
         <div class="view overlay">
-          <img src="./img/jorge.jpeg" class="card-img-top img_eq"
+          <img src="./img/jorge.jpeg" class="card-img-top equipo-img"  width="220px" height="300"
             alt="">
           <a href="#">
             <div class="mask rgba-white-slight"></div>
@@ -146,7 +146,7 @@
       <div class="card">
         <!--Card image-->
         <div class="view overlay">
-          <img src="./img/marco.jpeg" class="card-img-top img_eq"
+          <img src="./img/marco.jpeg" class="card-img-top" width="220px" height="300"
             alt="">
           <a href="#">
             <div class="mask rgba-white-slight"></div>
@@ -170,7 +170,7 @@
       <div class="card">
         <!--Card image-->
         <div class="view overlay">
-          <img src="./img/patricia.jpeg" class="card-img-top img_eq"
+          <img src="./img/patricia.jpeg" class="card-img-top equipo-img" width="220px" height="300"
             alt="">
           <a href="#">
             <div class="mask rgba-white-slight"></div>
@@ -192,7 +192,7 @@
       <div class="card">
         <!--Card image-->
         <div class="view overlay">
-          <img src="./img/daniel.jpeg" class="card-img-top img_eq"
+          <img src="./img/daniel.jpeg" class="card-img-top equipo-img"  width="220px" height="300"
             alt="">
           <a href="#">
             <div class="mask rgba-white-slight"></div>
@@ -219,7 +219,7 @@
       <div class="card">
         <!--Card image-->
         <div class="view overlay">
-          <img src="./img/viviana.jpeg" class="card-img-top img_eq"
+          <img src="./img/viviana.jpeg" class="card-img-top equipo-img"  width="220px" height="300"
             alt="">
           <a href="#">
             <div class="mask rgba-white-slight"></div>
@@ -244,7 +244,7 @@
 
         <!--Card image-->
         <div class="view overlay">
-          <img src="./img/david.jpeg" class="card-img-top img_eq"
+          <img src="./img/david.jpeg" class="card-img-top equipo-img"  width="220px" height="300"
             alt="">
           <a href="#">
             <div class="mask rgba-white-slight"></div>
@@ -273,7 +273,7 @@
 
         <!--Card image-->
         <div class="view overlay">
-          <img src="./img/carla.jpeg" class="card-img-top img_eq"
+          <img src="./img/carla.jpeg" class="card-img-top equipo-img"  width="220px" height="300"
             alt="">
           <a href="#">
             <div class="mask rgba-white-slight"></div>
@@ -296,7 +296,7 @@
       <div class="card">
         <!--Card image-->
         <div class="view overlay">
-          <img src="./img/evelyn.jpeg" class="card-img-top img_eq"
+          <img src="./img/evelyn.jpeg" class="card-img-top equipo-img"  width="220px" height="300"
             alt="">
           <a href="#">
             <div class="mask rgba-white-slight"></div>
@@ -323,7 +323,7 @@
           <div class="card">
             <!--Card image-->
             <div class="view overlay">
-              <img src="./img/angelica.jpeg" class="card-img-top img_eq"
+              <img src="./img/angelica.jpeg" class="card-img-top equipo-img"  width="220px" height="300"
                 alt="">
               <a href="#">
                 <div class="mask rgba-white-slight"></div>
@@ -347,7 +347,7 @@
 
             <!--Card image-->
             <div class="view overlay">
-              <img src="./img/anita.jpeg" class="card-img-top img_eq"
+              <img src="./img/anita.jpeg" class="card-img-top equipo-img"  width="220px" height="300"
                 alt="">
               <a href="#">
                 <div class="mask rgba-white-slight"></div>

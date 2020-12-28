@@ -14,34 +14,6 @@
     <link rel="stylesheet" type="text/css" href="./css/index.css" th:href="@{/css/index.css}">
 
 </head>
-<?php
-    include "conexion.php";
-    if( !empty($_POST)){
-        $corre = mysqli_real_escape_string($con,$_POST['correo']);
-        $password = mysqli_real_escape_string($con,$_POST['password']);
-        $pass_brigida= sha1($password);
-        $sql = "SELECT idcliente FROM cliente 
-                WHERE correo = '$corre' AND password ='$pass_brigida' ";
-
-        $resultado = $con->query($sql);
-        $rows = $resultado->num_rows;
-        if($rows>0)
-        {
-            $row = $resultado->fetch_assoc();
-            $_SESSION['id_user']=$row["idcliente"];
-            if($_POST['correo']=="ADMIN@MPB.CL")
-                header("location: index.php?pagina=admin");
-            else 
-                header("location: index.php?pagina=emprendedor");
-        }
-        else{
-            echo "<script>
-                        alert('Usuario o password Incorrecta')
-                        window.location = 'index.php?pagina=login';
-                    </script> ";
-        }
-    }
-?>
 <!DOCTYPE html>
 <html>
 
@@ -78,3 +50,35 @@
     </body>
 
 </html>
+<?php
+    include "conexion.php";
+    if( !empty($_POST)){
+        $corre = mysqli_real_escape_string($con,$_POST['correo']);
+        $password = mysqli_real_escape_string($con,$_POST['password']);
+        $pass_brigida= sha1($password);
+        $sql = "SELECT idcliente FROM cliente 
+                WHERE correo = '$corre' AND password ='$pass_brigida' ";
+
+        $resultado = $con->query($sql);
+        $rows = $resultado->num_rows;
+        if($rows>0)
+        {
+            $row = $resultado->fetch_assoc();
+            $_SESSION['id_user']=$row["idcliente"];
+            if($_POST['correo']=="ADMIN@MPB.CL")
+                print "<script>window.setTimeout(function() { window.location = 'index.php?pagina=admin' }, 0000);</script>";
+            else 
+            print "<script>window.setTimeout(function() { window.location = 'index.php?pagina=emprendedor' },0000);</script>";
+        }
+        else{
+            ?>
+            <script>
+                var element = document.getElementById("mensaje");
+                element.style.color = '#d00' 
+                element.className = "container card col-md-5 mb-5 text-center alert alert-secondary"; 
+                element.innerHTML ="<span class='alert-secondary'> Usuario y/o contraseña incorrectos, por favor verifique los datos </span>";
+            </script>
+        <?php
+        }
+    }
+?>

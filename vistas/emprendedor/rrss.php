@@ -22,7 +22,7 @@
       </div>
   </div>
   <br>
-  <div class="row">
+  <div class="row text-center">
         <div class="col">
             <iframe width="540" height="300" src="https://www.youtube.com/embed/2Tl5k4OOzzo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
@@ -31,7 +31,7 @@
         </div>
     </div>
     <br>
-    <div class="row">
+    <div class="row text-center">
         <div class="col">
           <iframe width="540" height="315" src="https://www.youtube.com/embed/HramzP9l730" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
@@ -49,7 +49,7 @@
         </div>
     </div>
     <br>
-    <div class="row">
+    <div class="row text-center">
         <div class="col">
             <div class="card bg-cuadro text-white text-center p-3">
                 <blockquote class="blockquote mb-0">

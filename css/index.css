@@ -66,3 +66,9 @@ button{
 .forgot a{
     color: white;
 }
+.equipo-img{
+    width: 208xp;
+    height: 220px;
+    box-shadow: 0px 0px 3px hsl(29, 90%, 92%);
+    border-radius: 50%;
+}

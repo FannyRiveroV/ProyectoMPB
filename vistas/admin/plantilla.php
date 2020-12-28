@@ -74,7 +74,10 @@
 	if(isset($_GET['pagina'])){
         if( $_GET['pagina'] == "clientes" || $_GET['pagina'] == "comunas"
         || $_GET['pagina'] == "ccursos" || $_GET['pagina'] == "buscador"
-        || $_GET['pagina'] == "cursos" || $_GET['pagina'] == "acursos"){
+        || $_GET['pagina'] == "cursos" || $_GET['pagina'] == "acursos"
+        || $_GET['pagina'] == "telefono" || $_GET['pagina'] == "correo"
+        || $_GET['pagina'] == "apmaterno" || $_GET['pagina'] == "appaterno"
+        || $_GET['pagina'] == "nombre"){
           include "vistas/admin/".$_GET['pagina'].".php";
         }
         else{
